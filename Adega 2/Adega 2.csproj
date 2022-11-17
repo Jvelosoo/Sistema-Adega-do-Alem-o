@@ -1,0 +1,274 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="15.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{E5B74E16-7249-4D68-953E-5B1F74B43350}</ProjectGuid>
+    <OutputType>WinExe</OutputType>
+    <RootNamespace>Adega_2</RootNamespace>
+    <AssemblyName>Adega 2</AssemblyName>
+    <TargetFrameworkVersion>v4.7.2</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <AutoGenerateBindingRedirects>true</AutoGenerateBindingRedirects>
+    <Deterministic>true</Deterministic>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="BouncyCastle.Crypto, Version=1.9.0.0, Culture=neutral, PublicKeyToken=0e99375e54769942, processorArchitecture=MSIL">
+      <HintPath>..\packages\Portable.BouncyCastle.1.9.0\lib\net40\BouncyCastle.Crypto.dll</HintPath>
+    </Reference>
+    <Reference Include="Google.Protobuf, Version=3.19.4.0, Culture=neutral, PublicKeyToken=a7d26565bac4d604, processorArchitecture=MSIL">
+      <HintPath>..\packages\Google.Protobuf.3.19.4\lib\net45\Google.Protobuf.dll</HintPath>
+    </Reference>
+    <Reference Include="Guna.UI2">
+      <HintPath>D:\Downloads\Guna.UI2 WinForms\Guna.UI2 WinForms\.net 4.0\Guna.UI2.dll</HintPath>
+    </Reference>
+    <Reference Include="K4os.Compression.LZ4, Version=1.2.6.0, Culture=neutral, PublicKeyToken=2186fa9121ef231d, processorArchitecture=MSIL">
+      <HintPath>..\packages\K4os.Compression.LZ4.1.2.6\lib\net46\K4os.Compression.LZ4.dll</HintPath>
+    </Reference>
+    <Reference Include="K4os.Compression.LZ4.Streams, Version=1.2.6.0, Culture=neutral, PublicKeyToken=2186fa9121ef231d, processorArchitecture=MSIL">
+      <HintPath>..\packages\K4os.Compression.LZ4.Streams.1.2.6\lib\net46\K4os.Compression.LZ4.Streams.dll</HintPath>
+    </Reference>
+    <Reference Include="K4os.Hash.xxHash, Version=1.0.6.0, Culture=neutral, PublicKeyToken=32cd54395057cec3, processorArchitecture=MSIL">
+      <HintPath>..\packages\K4os.Hash.xxHash.1.0.6\lib\net46\K4os.Hash.xxHash.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.VisualBasic" />
+    <Reference Include="MySql.Data, Version=8.0.30.0, Culture=neutral, PublicKeyToken=c5687fc88969c44d, processorArchitecture=MSIL">
+      <HintPath>..\packages\MySql.Data.8.0.30\lib\net452\MySql.Data.dll</HintPath>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.Buffers, Version=4.0.3.0, Culture=neutral, PublicKeyToken=cc7b13ffcd2ddd51, processorArchitecture=MSIL">
+      <HintPath>..\packages\System.Buffers.4.5.1\lib\net461\System.Buffers.dll</HintPath>
+    </Reference>
+    <Reference Include="System.ComponentModel" />
+    <Reference Include="System.ComponentModel.DataAnnotations" />
+    <Reference Include="System.Configuration" />
+    <Reference Include="System.Configuration.Install" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Design" />
+    <Reference Include="System.Management" />
+    <Reference Include="System.Memory, Version=4.0.1.1, Culture=neutral, PublicKeyToken=cc7b13ffcd2ddd51, processorArchitecture=MSIL">
+      <HintPath>..\packages\System.Memory.4.5.4\lib\net461\System.Memory.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Numerics" />
+    <Reference Include="System.Numerics.Vectors, Version=4.1.4.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a, processorArchitecture=MSIL">
+      <HintPath>..\packages\System.Numerics.Vectors.4.5.0\lib\net46\System.Numerics.Vectors.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Runtime.CompilerServices.Unsafe, Version=5.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a, processorArchitecture=MSIL">
+      <HintPath>..\packages\System.Runtime.CompilerServices.Unsafe.5.0.0\lib\net45\System.Runtime.CompilerServices.Unsafe.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Transactions" />
+    <Reference Include="System.Windows.Forms.DataVisualization" />
+    <Reference Include="System.Windows.Forms.DataVisualization.Design" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Deployment" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Net.Http" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Xml" />
+    <Reference Include="Ubiety.Dns.Core, Version=2.2.1.0, Culture=neutral, PublicKeyToken=c5687fc88969c44d, processorArchitecture=MSIL">
+      <HintPath>..\packages\MySql.Data.8.0.30\lib\net452\Ubiety.Dns.Core.dll</HintPath>
+    </Reference>
+    <Reference Include="ZstdNet, Version=1.4.5.0, Culture=neutral, PublicKeyToken=c5687fc88969c44d, processorArchitecture=MSIL">
+      <HintPath>..\packages\MySql.Data.8.0.30\lib\net452\ZstdNet.dll</HintPath>
+    </Reference>
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="codigosGerais.cs" />
+    <Compile Include="frmAcesso.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmAcesso.Designer.cs">
+      <DependentUpon>frmAcesso.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmEstoque.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmEstoque.designer.cs">
+      <DependentUpon>frmEstoque.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmFechaCaixa.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmFechaCaixa.Designer.cs">
+      <DependentUpon>frmFechaCaixa.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmNovoProduto.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmNovoProduto.Designer.cs">
+      <DependentUpon>frmNovoProduto.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmFiltrarEstoque.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmFiltrarEstoque.Designer.cs">
+      <DependentUpon>frmFiltrarEstoque.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmGerenciarFuncionarios.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmGerenciarFuncionarios.designer.cs">
+      <DependentUpon>frmGerenciarFuncionarios.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmLogin.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmLogin.designer.cs">
+      <DependentUpon>frmLogin.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmPdvFinalizarVenda.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmPdvFinalizarVenda.designer.cs">
+      <DependentUpon>frmPdvFinalizarVenda.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmPdvFormaPagamento.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmPdvFormaPagamento.designer.cs">
+      <DependentUpon>frmPdvFormaPagamento.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmPdvPedidos.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmPdvPedidos.designer.cs">
+      <DependentUpon>frmPdvPedidos.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmTelaPrincipal.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmTelaPrincipal.designer.cs">
+      <DependentUpon>frmTelaPrincipal.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmTesteAutoComplete.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmTesteAutoComplete.Designer.cs">
+      <DependentUpon>frmTesteAutoComplete.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmVendas.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmVendas.Designer.cs">
+      <DependentUpon>frmVendas.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Program.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <EmbeddedResource Include="frmAcesso.resx">
+      <DependentUpon>frmAcesso.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmEstoque.resx">
+      <DependentUpon>frmEstoque.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmFechaCaixa.resx">
+      <DependentUpon>frmFechaCaixa.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmFiltrarEstoque.resx">
+      <DependentUpon>frmFiltrarEstoque.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmGerenciarFuncionarios.resx">
+      <DependentUpon>frmGerenciarFuncionarios.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmLogin.resx">
+      <DependentUpon>frmLogin.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmNovoProduto.resx">
+      <DependentUpon>frmNovoProduto.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmPdvFinalizarVenda.resx">
+      <DependentUpon>frmPdvFinalizarVenda.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmPdvFormaPagamento.resx">
+      <DependentUpon>frmPdvFormaPagamento.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmPdvPedidos.resx">
+      <DependentUpon>frmPdvPedidos.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmTelaPrincipal.resx">
+      <DependentUpon>frmTelaPrincipal.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmTesteAutoComplete.resx">
+      <DependentUpon>frmTesteAutoComplete.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmVendas.resx">
+      <DependentUpon>frmVendas.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Properties\Resources.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <SubType>Designer</SubType>
+      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
+    </EmbeddedResource>
+    <None Include="packages.config" />
+    <None Include="Properties\Settings.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <LastGenOutput>Settings.Designer.cs</LastGenOutput>
+    </None>
+    <Compile Include="Properties\Resources.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Resources.resx</DependentUpon>
+    </Compile>
+    <Compile Include="Properties\Settings.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Settings.settings</DependentUpon>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="App.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\user.ico" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\estoque.ico" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\vendas.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\caixaregistradora.ico" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\sair.ico" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\add.ico" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\search.ico" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\editar.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\TransferenciaDados\TransferenciaDados.csproj">
+      <Project>{66b58a63-d47c-4048-9998-fac18726859a}</Project>
+      <Name>TransferenciaDados</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+</Project>
